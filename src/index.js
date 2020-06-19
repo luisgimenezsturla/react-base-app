@@ -4,18 +4,18 @@ import ReactDOM from 'react-dom';
 const rootEl = document.getElementById('app-site');
 
 let render = () => {
-  const MainApp = require('./mainapp').default;
+  const Root = require('./root').default;
   ReactDOM.render(
-    <MainApp />,
+    <Root />,
     rootEl
   );
 };
 
 if (module.hot) {
-  module.hot.accept('./mainapp', () => {
-    const MainApp = require('./mainapp').default;
+  module.hot.accept('./root', () => {
+    const Root = require('./root').default;
     render(
-      <MainApp />,
+      <Root />,
       rootEl
     );
   });
